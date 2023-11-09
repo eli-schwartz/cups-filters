@@ -237,11 +237,8 @@ AS_IF([test "x$enable_mutool" != "xyes"], [
 	AS_IF([test "x$CUPS_MUTOOL" = "x"], [
 		AC_MSG_ERROR([Required mutool binary is missing. Please install mutool.])
 	])
-	AC_DEFINE([HAVE_MUTOOL], [], [Define that we provide mutool binary])
 ])
 AM_CONDITIONAL(ENABLE_MUTOOL, test "x$enable_mutool" = xyes)
-AC_SUBST(CUPS_MUTOOL)
-AC_DEFINE_UNQUOTED([CUPS_MUTOOL],"$CUPS_MUTOOL",[mutool binary to use])
 
 # ==============================
 # Check for "driverless" utility
